@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=], initial-scale=1.0">
     <title>SITE USV VOLLEYBALL</title>
     <link rel="icon" type="image/x-icon" href="/usv-volley-roundpng1432286552.ico">
+    <!-- <link rel="stylesheet" href="/cssessaie.css"> -->
 </head>
 <body>
     <nav class="navbar">
@@ -33,6 +34,51 @@ Cliquez ici pour acceder a notre page
 <a href="https://www.instagram.com/vendomevolley/#">Instagram
 </a>
 </h2>
+<!--
+			
+				<footer id="footer">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-12">
+
+								
+									<section>
+										<h2 class="major"><span>En savoir plus sur nous</span></h2>
+										<p>
+											Voici le site de <strong>l'USV VOLLEYBALL</strong>, un site web responsive conçu par
+                                            <a href="instanatou"><strong>MrNatou</strong></a> pour l'USV VOLLEYBALL
+                                            C'est tout :)
+										</p>
+									</section>
+
+							</div>
+							<div class="col-12">
+
+								
+									<section>
+										<h2 class="major"><span>Nous contacter</span></h2>
+										<ul class="contact">
+											<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
+											<li><a class="icon brands fa-twitter" href="mailito:"><span class="label">Mail</span></a></li>
+											<li><a class="icon brands fa-instagram" href="https://www.instagram.com/vendomevolley/#"><span class="label">Instagram</span></a></li>
+											<li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+											<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+										</ul>
+									</section>
+
+							</div>
+						</div>
+
+						
+							<div id="copyright">
+								<ul class="menu">
+									<li>&copy; MrNatou. All rights reserved - MrNatou Tous Droits Reservé</li>
+								</ul>
+							</div>
+
+					</div>
+				</footer>
+                -->
 </body>
  <style>
         body {
@@ -138,5 +184,65 @@ Cliquez ici pour acceder a notre page
     h2 {
         color: white;
     }
+   /* Responsive */
+@media (max-width: 768px) {
+    /* Cache le menu par défaut */
+    .navdiv ul {
+        display: none;
+        flex-direction: column;
+        background: #012957;
+        position: absolute;
+        top: 65px;
+        right: 15px;
+        width: 220px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+        animation: slideDown 0.3s ease;
+    }
+
+    /* Quand actif */
+    .navdiv ul.show {
+        display: flex;
+    }
+
+    /* Les liens */
+    li {
+        display: block;
+        margin: 12px 0;
+        text-align: right;
+    }
+    li a {
+        margin: 0;
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+    li a:hover {
+        transform: translateX(-5px);
+    }
+
+    /* On centre logo + texte */
+    .logo {
+        font-size: 20px;
+    }
+
+    /* Animation menu */
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+}
+
     </style>
+<script>
+    // Toggle menu
+    const menuToggle = document.querySelector('.logo img');
+    const menu = document.querySelector('.navdiv ul');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+</script>
+
+
 </html>
