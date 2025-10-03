@@ -19,6 +19,10 @@ body {
             font-weight: bold;
             color: white;
         }
+        .logo-text {
+            font-size: 24px;
+            line-height: 60px;
+        }
         li {
             list-style: none;
             display: inline-block;
@@ -52,7 +56,7 @@ body {
             width: calc(100% + 4px);
             height: calc(100% + 4px);
             background: linear-gradient(45deg,
-                 #012957, yellow, #FFF700, #007FFF, #4682B4, #00CCFF, #004F98);
+             #012957, #007FFF, #4682B4, #00CCFF, #004F98);
             background-size: 600%;
             z-index: -2;
             border-radius: 12px;
